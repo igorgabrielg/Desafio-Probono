@@ -2,16 +2,19 @@
 
 Projeto desenvolvido afim de completar o desafio proposto pela probono
 
-Configurando o Projeto
+
+**Configurando o Projeto**
+
 Terminal Aberto
 
-git clone https://gitlab.com/igor.gabrielg/desafio_probono.git
+>> git clone https://gitlab.com/igor.gabrielg/desafio_probono.git
 
-cd desafio_probono
+>> cd desafio_probono
 
-npm install
+>>  npm install
 
-Abra o Aplicativo Cliente MySQL (phpmyadmin / sqlManager) Importe o banco de dados.
+
+Abra o Aplicativo Cliente MySQL (phpmyadmin / sqlManager) Importe o banco de dados user_test.sql.
 
 Em seguida, volte ao terminal e execute o seguinte comando
 
