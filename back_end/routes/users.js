@@ -10,12 +10,10 @@ app.post(function(req, res, next){
     console.log(req);
   })
 
-
+// JSON.stringify(req.user)
 router.get('/', function (req, res, next) {
-    console.log(req.session)
     console.log(req.user);
-    console.log(req.authInfo);
-    res.send('O usuario foi autenticado: ' + req.isAuthenticated());
+    res.send('Exibindo perfil: '+ req.user[0].id);
 });
 
 function execSQLQuery(sqlQry, res){

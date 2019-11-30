@@ -28,8 +28,8 @@ router.post('/',
         //   console.log("before delay")
         //   await delay(2000);
         //   console.log("after delay")
-        
-          return res.redirect('/users');
+          res.login = user
+          return res.login, res.redirect('/users');
         });
         // return res.redirect('/users');
 
