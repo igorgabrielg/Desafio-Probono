@@ -20,7 +20,7 @@ router.post('/users', function(req, res, next) {
             res.send('Dado atualizado:' + req.name)
         })
         .catch((err) => {
-          console.log('Dado atualizado:' + req.name)
+          console.log('Dado atualizado:' + req.body.name)
             console.log(err);
             res.send('Erro!:')
         });
