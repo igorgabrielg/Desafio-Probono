@@ -1,12 +1,35 @@
 var express = require('express');
 var router = express.Router();
-var passport = require('passport');
+var app = express();
 var path = require('path');
+var db = require('../db/db_helper');
+var passport = require('passport');
+const mysql = require('mysql');
+
+var session = require('express-session');
+
+
 
 router.get("/", function (req, res, next) {
     console.log(req.session);
     res.sendFile(path.join(__dirname, '../../front_end/index.html'));
 });
+
+router.get('/users', (req, res, next) => {
+  console.log('-------------------------------------------------------------------------------------------------');
+  db.querySQLSync(`UPDATE users SET name="MEU", cpf="0000", email="Meu teste" WHERE users.id = 23`, true)
+        .then(() => {
+            console.log('Dado atualizado:' + req.name)
+            // res.send('Atualizado!')
+            res.send('Dado atualizado:' + req.name)
+        })
+        .catch((err) => {
+          console.log('Dado atualizado:' + req.name)
+            console.log(err);
+            res.send('Erro!:')
+        });
+})
+
 
 router.post('/',
     function (req, res, next) {

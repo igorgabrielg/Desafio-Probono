@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,8 +42,8 @@
 </head>
 <body>
 <div class="login-form">
-    <form action="/update" method="post">
-        <h1 class="text-center">Registrar</h1>      
+    <form action="/register" method="post">
+        <h1 class="text-center">Atualizar dados</h1>      
 			<br>
 		<h2 class="text-center">Dados pessoais</h2>
         <form>
@@ -83,10 +83,8 @@
 		<input type="password" name="password" id="password" class="form-control" placeholder="Senha" type="password">
     </div> <!-- form-group// -->                                      
     <div class="form-group">
-        <button type="submit" value="Register" class="btn btn-primary btn-block"> Criar Conta  </button>
-    </div> <!-- form-group// -->      
-    <p class="text-center">Have an account? <a href="/">Log In</a> </p>                                                                 
-	</form>    
+        <button type="submit" value="Register" class="btn btn-primary btn-block"> Atualizar dados </button>
+    </div> <!-- form-group// -->         
 <script>
    function cpf_incorreto(el) {
       alert("O valor " + el.value + " não é um CPF");
