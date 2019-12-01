@@ -9,6 +9,7 @@ var session = require('express-session');
 
 app.use(methodOverride('_method'));
 
+
 // JSON.stringify(req.user)
 router.get('/', function (req, res, next) {
 

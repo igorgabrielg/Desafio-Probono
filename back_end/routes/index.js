@@ -11,19 +11,22 @@ var session = require('express-session');
 
 
 router.post('/users', function(req, res, next) {
-  console.log('-----------------------------------------------------------------------------------------------------------');
-  console.log('Valor: '+ req.body.name);
-  db.querySQLSync(`UPDATE users SET name="${req.body.name}", cpf="${req.body.cpf}", email="${req.body.email}" WHERE users.id = 23`, true)
-        .then(() => {
-            console.log('Dado atualizado:' + req.name)
-            // res.send('Atualizado!')
-            res.send('Dado atualizado:' + req.name)
-        })
-        .catch((err) => {
-          console.log('Dado atualizado:' + req.body.name)
-            console.log(err);
-            res.send('Erro!:')
-        });
+  if (!req.isAuthenticated()){
+    console.log('O usuario não é autenticado!');
+    res.send('O usuario não é autenticado!')
+  }
+  else
+    db.querySQLSync(`UPDATE users SET name="${req.body.name}", cpf="${req.body.cpf}", email="${req.body.email}" WHERE users.id = "${req.user[0].id}"`, true)
+          .then(() => {
+              console.log('Os dados de: ' +  req.body.id + 'foram atualizado.')
+              // res.send('Atualizado!')
+              res.send('Dado atualizado:' +  req.body.name)
+          })
+          .catch((err) => {
+            console.log('Erro ao atualizar os dados do usuario: ' + req.body.id)
+              console.log(err);
+              res.send('Erro ao atualizar os dados do usuario: ' + req.body.name)
+          });
 
 })
 
