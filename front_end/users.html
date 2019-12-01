@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Simple Login Form</title>
+<title>Atualizar</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
@@ -43,14 +43,14 @@
 <body>
 <div class="login-form">
     <form action="/users" method="post">
-        <h1 class="text-center">Perfil</h1>      
+        <h1 class="text-center">Atualizar</h1>      
 			<br>
 		<h2 class="text-center">Dados pessoais</h2>
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input type="text" name="name" id="name" class="form-control" value="Nome" >
+        <input type="text" name="name" id="name" class="form-control" placeholder="Nome" >
     </div> <!-- form-group// -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
@@ -58,14 +58,14 @@
 		 </div>
         
 		
-		<input type="text" class="form-control" required name="cpf" id="cpf" pattern="^(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})$" value="000.000.000-00"  oninvalid="return cpf_incorreto(this);"/>
+		<input type="text" class="form-control" required name="cpf" id="cpf" pattern="^(\d{3}\.\d{3}\.\d{3}-\d{2})|(\d{11})$" placeholder="000.000.000-00"  oninvalid="return cpf_incorreto(this);"/>
 		
     </div> <!-- form-group// -->
 	<div class="form-group input-group">
     	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span> 
 		 </div>
-        <input type="email" name="email" id="email" class="form-control" value="Email@email.com">
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email@email.com">
     </div> <!-- form-group// -->
     <!-- form-group// -->                                      
     <div class="form-group">

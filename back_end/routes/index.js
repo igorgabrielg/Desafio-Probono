@@ -30,6 +30,15 @@ router.post('/users', function(req, res, next) {
 
 })
 
+router.post('/verificar', function(req, res, next) {
+  res.render('/users', {
+    nome: req.body.name,
+    cpf: req.body.cpf,
+    email: req.body.email
+  })
+
+})
+
 
 router.get("/", function (req, res, next) {
   console.log(req.session);
