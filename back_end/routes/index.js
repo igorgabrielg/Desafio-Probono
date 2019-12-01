@@ -10,14 +10,10 @@ var session = require('express-session');
 
 
 
-router.get("/", function (req, res, next) {
-    console.log(req.session);
-    res.sendFile(path.join(__dirname, '../../front_end/index.html'));
-});
-
-router.get('/users', (req, res, next) => {
-  console.log('-------------------------------------------------------------------------------------------------');
-  db.querySQLSync(`UPDATE users SET name="MEU", cpf="0000", email="Meu teste" WHERE users.id = 23`, true)
+router.post('/users', function(req, res, next) {
+  console.log('-----------------------------------------------------------------------------------------------------------');
+  console.log('Valor: '+ req.body.name);
+  db.querySQLSync(`UPDATE users SET name="${req.body.name}", cpf="${req.body.cpf}", email="${req.body.email}" WHERE users.id = 23`, true)
         .then(() => {
             console.log('Dado atualizado:' + req.name)
             // res.send('Atualizado!')
@@ -28,8 +24,14 @@ router.get('/users', (req, res, next) => {
             console.log(err);
             res.send('Erro!:')
         });
+
 })
 
+
+router.get("/", function (req, res, next) {
+  console.log(req.session);
+  res.sendFile(path.join(__dirname, '../../front_end/index.html'));
+});
 
 router.post('/',
     function (req, res, next) {

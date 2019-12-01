@@ -9,21 +9,6 @@ var session = require('express-session');
 
 app.use(methodOverride('_method'));
 
-app.post('/users', (req, res, next) => {
-  console.log('-------------------------------------------------------------------------------------------------');
-  db.querySQLSync(`UPDATE users SET name="${req.id.name}", cpf="${req.id.cpf}", email="${req.email}" WHERE users.id = 28`, true)
-        .then(() => {
-            console.log('Dado atualizado:' + req.name)
-            // res.send('Atualizado!')
-            res.send('Dado atualizado:' + req.name)
-        })
-        .catch((err) => {
-          console.log('Dado atualizado:' + req.name)
-            console.log(err);
-            res.send('Erro!:')
-        });
-})
-
 // JSON.stringify(req.user)
 router.get('/', function (req, res, next) {
 
