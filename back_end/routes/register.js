@@ -16,7 +16,7 @@ router.post('/', function (request, response, next) {
 
     db.querySQLSync(`INSERT INTO users (name, cpf, email, username, password, salt) VALUES ("${request.body.name}", "${request.body.cpf}", "${request.body.email}", "${request.body.username}", "${passwordObj.passwordHash}", "${passwordObj.salt}")`, true)
         .then(() => {
-            response.sendStatus(200);
+            return response.redirect('/');
         })
         .catch((err) => {
             console.log(err);
