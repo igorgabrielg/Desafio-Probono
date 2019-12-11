@@ -7,7 +7,7 @@
 
 > git clone https://gitlab.com/igor.gabrielg/desafio_probono.git
 
-> cd desafio_probono
+> cd desafio_probono/backend
 
 >  npm install
 
