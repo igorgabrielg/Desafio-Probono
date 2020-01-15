@@ -9,7 +9,7 @@ Implementar um CRUD de cadastro/edição e deleção de cliente.
 - Desenvolver o back-end e o front-end separados.
 - Escrever o script de criação do banco de dados da solução proposta
 - A senha do cliente deve ser criptografada e dados internos utilizar 
-autenticação JWt
+autenticação JWT
 
 **Configurando o Projeto**
 
