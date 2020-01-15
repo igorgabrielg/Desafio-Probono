@@ -1,6 +1,7 @@
 # Desafio Probono
 
 **Proposta**
+
 Implementar um CRUD de cadastro/edição e deleção de cliente.
 
 **Desafio**
@@ -11,6 +12,7 @@ Implementar um CRUD de cadastro/edição e deleção de cliente.
 autenticação JWt
 
 **Configurando o Projeto**
+
 - Abra o terminal e digite:
 
 > git clone https://gitlab.com/igor.gabrielg/desafio_probono.git
