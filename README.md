@@ -1,6 +1,14 @@
 # Desafio Probono
 
-- Projeto desenvolvido afim de completar o desafio proposto pela probono
+**Proposta**
+Implementar um CRUD de cadastro/edição e deleção de cliente.
+
+**Desafio**
+
+- Desenvolver o back-end e o front-end separados.
+- Escrever o script de criação do banco de dados da solução proposta
+- A senha do cliente deve ser criptografada e dados internos utilizar 
+autenticação JWt
 
 **Configurando o Projeto**
 - Abra o terminal e digite:
