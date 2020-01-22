@@ -15,15 +15,15 @@ autenticação JWT
 
 - Abra o terminal e digite:
 
-> git clone https://gitlab.com/igor.gabrielg/desafio_probono.git
+`git clone https://gitlab.com/igor.gabrielg/desafio_probono.git`
 
-> cd desafio_probono/back_end
+`cd desafio_probono/back_end`
 
->  npm install
+`npm install`
 
 
 **Abra o Aplicativo Cliente MySQL (phpmyadmin / sqlManager) Importe o banco de dados.**
 
 - Em seguida, volte ao terminal e execute o seguinte comando:
 
-> node index.js
+`node index.js`
